@@ -15,7 +15,12 @@ body {
   background-position: center;
 
   display: grid;
-  align-items: end;
+  grid-template-rows: min-content 1fr;
+
+  main {
+    display: grid;
+    place-items: center;
+  }
 }
 
 .container {
@@ -24,8 +29,14 @@ body {
 
   width: min($max-width, 100% - $padding * 2);
   margin-inline: auto;
+}
 
+.grid-container {
   display: grid;
-  grid-auto-flow: column;
-  align-items: center;
+  gap: rem(30);
+  grid-template-columns: minmax(rem(32), 1fr) repeat(2, minmax(0, rem(640))) minmax(
+      rem(32),
+      1fr
+    );
+  place-items: center;
 }

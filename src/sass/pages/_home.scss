@@ -5,6 +5,9 @@ body[class="home"] {
 }
 
 .home-section__text {
-  width: min(rem(360), 100%);
-  margin-bottom: rem(130);
+  grid-column: 2;
+}
+
+.home-section__btn {
+  grid-column: 3;
 }

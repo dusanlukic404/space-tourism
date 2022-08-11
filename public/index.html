@@ -8,7 +8,7 @@
       name="description"
       content="Space tourism website challenge by Frontend Mentor"
     />
-    <title>Space tourism website</title>
+    <title>Space Tourism - Homepage</title>
     <link
       rel="shortcut icon"
       href="./assets/favicon-32x32.png"
@@ -27,12 +27,16 @@
     <header class="header">
       <div>
         <a href="index.html"
-          ><img src="./assets/shared/logo.svg" alt="Space tourism logo"
+          ><img
+            class="logo"
+            src="./assets/shared/logo.svg"
+            alt="Space tourism logo"
         /></a>
       </div>
 
       <button class="btn btn-menu" aria-controls="primary-navigation">
         <span class="visually-hidden">Menu</span>
+        <!-- fali hamburger ikonica -->
       </button>
 
       <nav>
@@ -43,25 +47,34 @@
           aria-expanded="true"
         >
           <li>
-            <a class="link--active" href="#"><span>00</span>Home</a>
+            <a href="index.html" class="link link--active"
+              ><span>00</span>Home</a
+            >
           </li>
           <li>
-            <a href="#"><span>00</span>Destination</a>
+            <a href="destination.html" class="link"
+              ><span>00</span>Destination</a
+            >
           </li>
           <li>
-            <a href="#"><span>00</span>Crew</a>
+            <a href="crew.html" class="link"><span>00</span>Crew</a>
           </li>
           <li>
-            <a href="#"><span>00</span>Technology</a>
+            <a href="technology.html" class="link"><span>00</span>Technology</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="home-section container">
+      <section
+        class="home-section grid-container"
+        aria-labelledby="home-heading"
+      >
         <div class="home-section__text">
-          <h1>So, you want to travel to <span>Space</span></h1>
+          <h1 id="home-heading">
+            So, you want to travel to <span>Space</span>
+          </h1>
           <p>
             Let's face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.

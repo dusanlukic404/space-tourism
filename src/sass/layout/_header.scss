@@ -1,48 +1,43 @@
 @use "../abstract/" as *;
 
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
 .header {
-  position: absolute;
-  top: rem(40);
-  width: 100%;
+  margin-top: clamp(rem(26), 2vw + 1rem, rem(40));
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: rem(55);
+
+  &::after {
+    position: relative;
+    content: "";
+    display: block;
+    margin-left: 3rem;
+    position: relative;
+    height: rem(2);
+    width: 100%;
+    background-color: rgba($clr-white, 0.3);
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
 
   .primary-navigation {
-    position: relative;
     display: flex;
     align-items: center;
     gap: min(5vw, rem(48));
-    padding-inline: rem(123) rem(167);
+    padding-inline: clamp(rem(64), 8.5vw + 1rem, rem(144));
     background-color: rgba($clr-white, 0.04);
     backdrop-filter: blur(10px);
+    order: 2;
 
-    &::before {
-      position: absolute;
-      content: "";
-      height: rem(2);
-      width: 90%;
-      top: 50%;
-      left: -80%;
-      transform: translateY(-50%);
-      background-color: rgba($clr-white, $alpha: 0.4);
-    }
-
-    li a {
-      display: inline-block;
-      padding-block: rem(39);
-      border-bottom: 4px solid transparent;
-
-      transition: border-bottom 300ms ease;
-
-      &:is(:hover, :focus-visible) {
-        border-bottom: 4px solid rgba($clr-white, $alpha: 0.4);
-      }
-
-      &.link--active {
-        border-bottom: 4px solid $clr-white;
-      }
+    .link {
+      $padding: rem(39);
+      padding-block: $padding;
     }
   }
 }
