@@ -1,0 +1,10 @@
+@use "../abstract/" as *;
+
+body[class="home"] {
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+}
+
+.home-section__text {
+  width: min(rem(360), 100%);
+  margin-bottom: rem(130);
+}

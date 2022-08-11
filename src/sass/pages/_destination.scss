@@ -1,0 +1,5 @@
+@use "../abstract/" as *;
+
+body[class="destination"] {
+  background-image: url("../../assets/destination/background-destination-desktop.jpg");
+}

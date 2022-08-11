@@ -1,0 +1,31 @@
+@use "../abstract/" as *;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a:is(:hover, :focus-visible) {
+  outline: none;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: grid;
+  align-items: end;
+}
+
+.container {
+  $max-width: rem(1100);
+  $padding: rem(20);
+
+  width: min($max-width, 100% - $padding * 2);
+  margin-inline: auto;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
