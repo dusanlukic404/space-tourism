@@ -1,12 +1,15 @@
 @use "../abstract/" as *;
 
+%subheading {
+  font-family: "Barlow Condensed", sans-serif;
+  color: $clr-accent;
+}
+
 body {
   font-weight: 400;
   color: $clr-white;
   font-family: "Barlow Condensed", sans-serif;
 }
-
-// h1-h6, a and p
 
 h1,
 h2,
@@ -24,16 +27,19 @@ h1 {
 
 h2 {
   font-size: clamp(rem(56), 7.6vw + 0.5rem, rem(100));
+
+  &.technology-heading {
+    font-size: clamp(rem(24), 3vw + 1rem, rem(56));
+  }
 }
 
 h3 {
   font-size: clamp(rem(24), 3vw + 1rem, rem(56));
 
-  &.destionation-subheading {
-    font-family: "Barlow Condensed", sans-serif;
+  &.destination-subheading {
+    @extend %subheading;
     font-size: rem(14);
     letter-spacing: $letter-spacing-3;
-    color: $clr-accent;
   }
 }
 
@@ -42,7 +48,14 @@ h4 {
 }
 
 p {
-  font-size: clamp(rem(15), 0.3vw + 1rem, rem(18));
+  font-size: clamp(rem(15), 1.5vw + 0.5rem, rem(18));
+
+  &.technology-subheading {
+    @extend %subheading;
+    font-size: rem(16);
+    letter-spacing: $letter-spacing-2;
+    text-transform: uppercase;
+  }
 }
 
 .info-boxes p {
@@ -101,10 +114,15 @@ a {
 }
 
 .section-text > p,
-.crew-text__bio {
+.crew-text__bio,
+.technology-info {
   max-width: rem(370);
   color: $clr-accent;
   line-height: 1.6;
+}
+
+.technology-info {
+  max-width: rem(351);
 }
 
 .btn-explore {

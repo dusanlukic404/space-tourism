@@ -1,0 +1,13 @@
+@use "../abstract/" as *;
+
+body[class="technology"] {
+  background-image: url("../../assets/technology/background-technology-desktop.jpg");
+
+  .technology-main {
+    display: flex;
+    align-items: center;
+    gap: rem(80);
+
+    margin-inline: auto;
+  }
+}

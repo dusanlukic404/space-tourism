@@ -17,7 +17,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr;
 
-  main {
+  main:not(.technology main) {
     display: grid;
     place-items: center;
   }
@@ -38,4 +38,12 @@ body {
     minmax(rem(32), 1fr);
   justify-items: center;
   align-items: end;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-bottom: rem(101);
 }

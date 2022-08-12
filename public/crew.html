@@ -8,7 +8,7 @@
       name="description"
       content="Space tourism website challenge by Frontend Mentor"
     />
-    <title>Space Tourism - Destination</title>
+    <title>Space Tourism - Crew</title>
     <link
       rel="shortcut icon"
       href="./assets/favicon-32x32.png"
@@ -87,33 +87,49 @@
               third time as commander of Crew Dragon Demo-2.
             </p>
           </div>
-          <ul role="list" class="crew-links" aria-label="List of crew members">
+          <ul
+            role="tablist"
+            class="crew-links"
+            aria-label="List of crew members"
+          >
             <li>
               <a
                 href=""
                 class="crew-link crew-link--active"
                 data-crewName="Douglas Hurley"
+                aria-selected="true"
               >
-                <span class="visually-hidden">Commander - Douglas Hurley</span>
+                <span class="visually-hidden">Commander</span>
               </a>
             </li>
             <li>
-              <a href="" class="crew-link" data-crewName="Mark Shuttleworth">
-                <span class="visually-hidden"
-                  >Mission specialist - Mark Shuttleworth</span
-                >
+              <a
+                href=""
+                class="crew-link"
+                data-crewName="Mark Shuttleworth"
+                aria-selected="false"
+              >
+                <span class="visually-hidden">Mission specialist</span>
               </a>
             </li>
             <li>
-              <a href="" class="crew-link" data-crewName="Victor Glover">
-                <span class="visually-hidden">Pilot - Victor Glover</span>
+              <a
+                href=""
+                class="crew-link"
+                data-crewName="Victor Glover"
+                aria-selected="false"
+              >
+                <span class="visually-hidden">Pilot</span>
               </a>
             </li>
             <li>
-              <a href="" class="crew-link" data-crewName="Anousheh Ansari">
-                <span class="visually-hidden"
-                  >Flight engineer - Anousheh Ansari</span
-                >
+              <a
+                href=""
+                class="crew-link"
+                data-crewName="Anousheh Ansari"
+                aria-selected="false"
+              >
+                <span class="visually-hidden">Flight engineer</span>
               </a>
             </li>
           </ul>

@@ -12,8 +12,12 @@ fetch("../data.json")
       e.preventDefault();
       if (!e.target.classList.contains("crew-link")) return;
 
-      crewLinks.forEach((link) => link.classList.remove("crew-link--active"));
+      crewLinks.forEach((link) => {
+        link.classList.remove("crew-link--active");
+        link.setAttribute("aria-selected", false);
+      });
       e.target.classList.add("crew-link--active");
+      e.target.setAttribute("aria-selected", true);
 
       selectedCrew = e.target.dataset.crewname;
 
