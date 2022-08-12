@@ -145,7 +145,7 @@ a {
 
 .crew-text__name {
   font-family: "Bellefair", serif;
-  font-size: clamp(1.5rem, 3vw + 1rem, 3.5rem);
+  font-size: clamp(1.5rem, 4vw + 1rem, 3.5rem);
   text-transform: uppercase;
   margin-bottom: 1.6875rem;
 }
@@ -167,7 +167,7 @@ a {
 }
 
 .section-text > p,
-.crew-text p:not(.crew-text__name) {
+.crew-text__bio {
   max-width: 23.125rem;
   color: hsl(231deg, 77%, 90%);
   line-height: 1.6;
@@ -339,8 +339,7 @@ body main {
 
 .grid-container {
   display: grid;
-  gap: 1.875rem;
-  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 42.5rem)) minmax(2rem, 1fr);
   justify-items: center;
   align-items: end;
 }

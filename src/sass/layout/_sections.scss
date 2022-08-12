@@ -33,11 +33,9 @@ body {
 
 .grid-container {
   display: grid;
-  gap: rem(30);
-  grid-template-columns: minmax(rem(32), 1fr) repeat(2, minmax(0, rem(640))) minmax(
-      rem(32),
-      1fr
-    );
+  grid-template-columns:
+    minmax(rem(32), 1fr) repeat(2, minmax(0, rem(680)))
+    minmax(rem(32), 1fr);
   justify-items: center;
   align-items: end;
 }

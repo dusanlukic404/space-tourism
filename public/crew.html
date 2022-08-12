@@ -80,33 +80,37 @@
           </h1>
           <div class="crew-text">
             <h2 class="crew-text__profession">Commander</h2>
-            <p class="crew-text__name">Douglas Hourley</p>
-            <p>
+            <p class="crew-text__name">Douglas Hurley</p>
+            <p class="crew-text__bio">
               Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
               third time as commander of Crew Dragon Demo-2.
             </p>
           </div>
-          <ul role="list" class="crew-links">
+          <ul role="list" class="crew-links" aria-label="List of crew members">
             <li>
-              <a href="" class="crew-link crew-link--active">
-                <span class="visually-hidden">Commander - Douglas Hourley</span>
+              <a
+                href=""
+                class="crew-link crew-link--active"
+                data-crewName="Douglas Hurley"
+              >
+                <span class="visually-hidden">Commander - Douglas Hurley</span>
               </a>
             </li>
             <li>
-              <a href="" class="crew-link">
+              <a href="" class="crew-link" data-crewName="Mark Shuttleworth">
                 <span class="visually-hidden"
                   >Mission specialist - Mark Shuttleworth</span
                 >
               </a>
             </li>
             <li>
-              <a href="" class="crew-link">
+              <a href="" class="crew-link" data-crewName="Victor Glover">
                 <span class="visually-hidden">Pilot - Victor Glover</span>
               </a>
             </li>
             <li>
-              <a href="" class="crew-link">
+              <a href="" class="crew-link" data-crewName="Anousheh Ansari">
                 <span class="visually-hidden"
                   >Flight engineer - Anousheh Ansari</span
                 >
@@ -115,7 +119,11 @@
           </ul>
         </div>
         <div class="section-img">
-          <img src="./assets/crew/image-douglas-hurley.png" alt="Crew member" />
+          <img
+            src="./assets/crew/image-douglas-hurley.png"
+            alt="Crew member"
+            class="crew-img"
+          />
         </div>
       </section>
     </main>

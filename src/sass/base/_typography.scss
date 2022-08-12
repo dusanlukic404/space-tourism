@@ -79,7 +79,7 @@ a {
 
 .crew-text__name {
   font-family: "Bellefair", serif;
-  font-size: clamp(rem(24), 3vw + 1rem, rem(56));
+  font-size: clamp(rem(24), 4vw + 1rem, rem(56));
   text-transform: uppercase;
   margin-bottom: rem(27);
 }
@@ -101,7 +101,7 @@ a {
 }
 
 .section-text > p,
-.crew-text p:not(.crew-text__name) {
+.crew-text__bio {
   max-width: rem(370);
   color: $clr-accent;
   line-height: 1.6;
