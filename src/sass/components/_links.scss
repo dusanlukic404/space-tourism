@@ -1,5 +1,7 @@
 @use "../abstract/" as *;
 
+// Primary header
+
 .link {
   $padding: rem(39);
   display: inline-block;
@@ -13,13 +15,15 @@
   transition: border-bottom 300ms ease;
 
   &:is(:hover, :focus-visible) {
-    border-bottom: 4px solid rgba($clr-white, $alpha: 0.4);
+    border-bottom: 4px solid rgba($clr-white, 0.4);
   }
 
   &.link--active {
     border-bottom: 4px solid $clr-white;
   }
 }
+
+// Destination
 
 .destination-list {
   display: flex;
@@ -35,5 +39,32 @@
 
   &.link--active {
     color: $clr-white;
+  }
+}
+
+// Crew
+
+.crew-links {
+  display: flex;
+  align-items: center;
+  gap: rem(24);
+
+  .crew-link {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba($clr-white, 0.3);
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+
+    &:is(:hover, :focus-visible) {
+      background-color: rgba($clr-white, 0.55);
+    }
+
+    &.crew-link--active {
+      background-color: $clr-white;
+    }
   }
 }

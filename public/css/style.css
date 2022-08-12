@@ -138,6 +138,18 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.crew-text__profession {
+  font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  color: hsl(231deg, 77%, 90%);
+}
+
+.crew-text__name {
+  font-family: "Bellefair", serif;
+  font-size: clamp(1.5rem, 3vw + 1rem, 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1.6875rem;
+}
+
 .home-section__text h1 {
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
@@ -154,7 +166,8 @@ a {
   font-size: clamp(5rem, 7vw + 1rem, 9.375rem);
 }
 
-.section-text > p {
+.section-text > p,
+.crew-text p:not(.crew-text__name) {
   max-width: 23.125rem;
   color: hsl(231deg, 77%, 90%);
   line-height: 1.6;
@@ -238,6 +251,27 @@ a {
 }
 .link-section.link--active {
   color: hsl(0deg, 0%, 100%);
+}
+
+.crew-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.crew-links .crew-link {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+.crew-links .crew-link:is(:hover, :focus-visible) {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.crew-links .crew-link.crew-link--active {
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 .logo {
@@ -344,4 +378,20 @@ body[class=destination] .section-text {
   align-items: center;
   margin-top: 1.75rem;
   gap: 2.4375rem;
+}
+
+body[class=crew] {
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
+}
+body[class=crew] .section-text {
+  height: 100%;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 7.5rem;
+}
+body[class=crew] .section-img {
+  grid-column: 3;
+  padding-top: 4.375rem;
 }
