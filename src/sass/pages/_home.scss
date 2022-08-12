@@ -2,12 +2,12 @@
 
 body[class="home"] {
   background-image: url("../../assets/home/background-home-desktop.jpg");
-}
 
-.home-section__text {
-  grid-column: 2;
-}
+  .home-section__text {
+    grid-column: 2;
+  }
 
-.home-section__btn {
-  grid-column: 3;
+  .home-section__btn {
+    grid-column: 3;
+  }
 }

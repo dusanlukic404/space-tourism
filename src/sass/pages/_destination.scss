@@ -2,4 +2,29 @@
 
 body[class="destination"] {
   background-image: url("../../assets/destination/background-destination-desktop.jpg");
+
+  .section-img {
+    grid-column: 2;
+  }
+
+  .section-text {
+    grid-column: 3;
+
+    & > p {
+      padding-bottom: rem(50);
+      border-bottom: 1px solid rgba($clr-white, 0.3);
+    }
+  }
+
+  .section-img,
+  .section-text {
+    margin-bottom: rem(120);
+  }
+}
+
+.info-boxes {
+  display: flex;
+  align-items: center;
+  margin-top: rem(28);
+  gap: rem(39);
 }

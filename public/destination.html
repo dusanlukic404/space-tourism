@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" type="module"></script>
+    <script src="./js/destination.js" defer></script>
   </head>
   <body class="destination">
     <header class="header">
@@ -46,25 +46,96 @@
           aria-expanded="true"
         >
           <li>
-            <a href="index.html" class="link"><span>00</span>Home</a>
-          </li>
-          <li>
-            <a href="destination.html" class="link link--active"
-              ><span>00</span>Destination</a
+            <a href="index.html" class="link"
+              ><span class="numbered-span">00</span>Home</a
             >
           </li>
           <li>
-            <a href="crew.html" class="link"><span>00</span>Crew</a>
+            <a href="destination.html" class="link link--active"
+              ><span class="numbered-span">01</span>Destination</a
+            >
           </li>
           <li>
-            <a href="technology.html" class="link"><span>00</span>Technology</a>
+            <a href="crew.html" class="link"
+              ><span class="numbered-span">02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a href="technology.html" class="link"
+              ><span class="numbered-span">03</span>Technology</a
+            >
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="destination-section container"></section>
+      <section
+        class="destination-section grid-container"
+        aria-labelledby="destination-heading"
+      >
+        <div class="section-img">
+          <h1 class="section-heading" id="destination-heading">
+            <span class="numbered-span">01</span> Pick your destination
+          </h1>
+          <img
+            class="destination-img"
+            src="./assets/destination/image-moon.png"
+            alt="Destination planet"
+          />
+        </div>
+        <div class="section-text">
+          <ul role="list" class="destination-list">
+            <li>
+              <a
+                href=""
+                class="link link-section link--active"
+                data-destination="moon"
+                >Moon</a
+              >
+            </li>
+            <li>
+              <a href="" class="link link-section" data-destination="mars"
+                >Mars</a
+              >
+            </li>
+            <li>
+              <a href="" class="link link-section" data-destination="europa"
+                >Europa</a
+              >
+            </li>
+            <li>
+              <a href="" class="link link-section" data-destination="titan"
+                >Titan</a
+              >
+            </li>
+          </ul>
+          <h2>Moon</h2>
+          <p>
+            See our planet as you've never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you're there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+          <div class="info-boxes">
+            <div class="box">
+              <h3
+                class="destionation-subheading"
+                data-subheading="avg-distance"
+              >
+                Avg. distance
+              </h3>
+              <p data-subheadingValue="avg-distance-value">384,400 km</p>
+            </div>
+            <div class="box">
+              <h3 class="destionation-subheading" data-subheading="travel-time">
+                Est. travel time
+              </h3>
+              <p data-subheadingValue="travel-time-value">3 days</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

@@ -3,8 +3,12 @@
 .link {
   $padding: rem(39);
   display: inline-block;
-  padding-bottom: $padding;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $clr-white;
+  letter-spacing: $letter-spacing-2;
   border-bottom: 4px solid transparent;
+  cursor: pointer;
 
   transition: border-bottom 300ms ease;
 
@@ -14,5 +18,22 @@
 
   &.link--active {
     border-bottom: 4px solid $clr-white;
+  }
+}
+
+.destination-list {
+  display: flex;
+  align-items: center;
+  gap: rem(35);
+}
+
+.link-section {
+  $padding: rem(10);
+  padding-bottom: $padding;
+  color: $clr-accent;
+  text-transform: uppercase;
+
+  &.link--active {
+    color: $clr-white;
   }
 }
