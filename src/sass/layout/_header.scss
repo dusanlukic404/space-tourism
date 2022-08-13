@@ -55,7 +55,9 @@
       padding-top: rem(150);
       font-size: rem(16);
 
-      // transform: translateX(100%);
+      transform: translateX(100%);
+
+      transition: transform 400ms ease;
     }
 
     .link {

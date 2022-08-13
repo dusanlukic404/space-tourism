@@ -252,6 +252,10 @@ a {
     z-index: 99999;
     margin-inline: auto clamp(1.5rem, 5vw, 3.5rem);
   }
+  .btn-menu:focus-visible {
+    outline-offset: 4px;
+    outline: 2px solid hsl(231deg, 77%, 90%);
+  }
 }
 
 .icon {
@@ -259,7 +263,15 @@ a {
   width: 1.875rem;
   height: 1.875rem;
 }
-.icon--active {
+
+.btn-menu .icon--hamburger {
+  display: block;
+}
+
+.btn-menu.btn-menu--active .icon--hamburger {
+  display: none;
+}
+.btn-menu.btn-menu--active .icon--close {
   display: block;
 }
 
@@ -462,6 +474,8 @@ a {
     padding-inline: clamp(1.5rem, 7vw + 0.5rem, 4.25rem);
     padding-top: 9.375rem;
     font-size: 1rem;
+    transform: translateX(100%);
+    transition: transform 400ms ease;
   }
 }
 .header .primary-navigation .link {
@@ -517,6 +531,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+}
+@media (max-width: 38.75em) {
+  .grid-container {
+    width: calc(100% - 1.25rem * 2);
+    margin-inline: auto;
   }
 }
 
