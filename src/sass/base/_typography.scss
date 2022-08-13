@@ -131,7 +131,7 @@ a {
 
   @include breakpoint("tablet") {
     text-align: center;
-    max-width: rem(400);
+    // max-width: rem(400);
   }
 }
 
@@ -140,13 +140,16 @@ a {
     max-width: rem(410);
     margin-inline: auto;
   }
+
+  // @include breakpoint("mobile") {
+  //   max-width: 100%
+  //  ne radi!!!!!!!!! }
 }
 
 .technology-info {
   max-width: rem(351);
 
   @include breakpoint("tablet") {
-    text-align: center;
     max-width: rem(392);
     margin-top: rem(16);
   }

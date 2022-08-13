@@ -13,14 +13,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  display: grid;
-  grid-template-rows: min-content 1fr;
-
-  main:not(.technology main) {
-    display: grid;
-    place-items: center;
-  }
 }
 
 .container {

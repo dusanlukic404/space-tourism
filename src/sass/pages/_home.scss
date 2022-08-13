@@ -3,15 +3,24 @@
 body[class="home"] {
   background-image: url("../../assets/home/background-home-desktop.jpg");
 
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  align-items: center;
+
+  @include breakpoint("tablet") {
+    display: block;
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+
   .home-section__text {
     grid-column: 2;
+
+    @include breakpoint("tablet") {
+      margin-top: clamp(rem(48), 5vw + 1rem, rem(106));
+    }
   }
 
   .home-section__btn {
     grid-column: 3;
-  }
-
-  @include breakpoint("tablet") {
-    background-image: url("../../assets/home/background-home-tablet.jpg");
   }
 }

@@ -201,7 +201,6 @@ a {
 .crew-text__bio,
 .technology-info {
     text-align: center;
-    max-width: 25rem;
   }
 }
 
@@ -217,7 +216,6 @@ a {
 }
 @media (max-width: 61.25em) {
   .technology-info {
-    text-align: center;
     max-width: 24.5rem;
     margin-top: 1rem;
   }
@@ -330,12 +328,6 @@ a {
   align-items: center;
   gap: 1.5rem;
 }
-@media (max-width: 61.25em) {
-  .crew-links {
-    justify-content: center;
-    margin-top: clamp(1.875rem, 4vw + 0.3rem, 2.5rem);
-  }
-}
 .crew-links .crew-link {
   display: inline-block;
   width: 15px;
@@ -350,6 +342,12 @@ a {
 }
 .crew-links .crew-link.crew-link--active {
   background-color: hsl(0deg, 0%, 100%);
+}
+@media (max-width: 61.25em) {
+  .crew-links {
+    justify-content: center;
+    margin-top: clamp(1.875rem, 4vw + 0.3rem, 2.5rem);
+  }
 }
 
 .technology-list {
@@ -453,12 +451,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-}
-body main:not(.technology main) {
-  display: grid;
-  place-items: center;
 }
 
 .container {
@@ -496,17 +488,26 @@ body main:not(.technology main) {
 
 body[class=home] {
   background-image: url("../../assets/home/background-home-desktop.jpg");
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  align-items: center;
+}
+@media (max-width: 61.25em) {
+  body[class=home] {
+    display: block;
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
 }
 body[class=home] .home-section__text {
   grid-column: 2;
 }
+@media (max-width: 61.25em) {
+  body[class=home] .home-section__text {
+    margin-top: clamp(3rem, 5vw + 1rem, 6.625rem);
+  }
+}
 body[class=home] .home-section__btn {
   grid-column: 3;
-}
-@media (max-width: 61.25em) {
-  body[class=home] {
-    background-image: url("../../assets/home/background-home-tablet.jpg");
-  }
 }
 
 body[class=destination] {
@@ -551,10 +552,18 @@ body[class=destination] .section-text {
 
 body[class=crew] {
   background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  align-items: flex-end;
+}
+@media (max-width: 61.25em) {
+  body[class=crew] {
+    display: block;
+  }
 }
 body[class=crew] .section-text {
-  height: 100%;
   grid-column: 2;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

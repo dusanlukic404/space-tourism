@@ -58,11 +58,6 @@
   align-items: center;
   gap: rem(24);
 
-  @include breakpoint("tablet") {
-    justify-content: center;
-    margin-top: clamp(rem(30), 4vw + 0.3rem, rem(40));
-  }
-
   .crew-link {
     display: inline-block;
     width: 15px;
@@ -80,6 +75,11 @@
     &.crew-link--active {
       background-color: $clr-white;
     }
+  }
+
+  @include breakpoint("tablet") {
+    justify-content: center;
+    margin-top: clamp(rem(30), 4vw + 0.3rem, rem(40));
   }
 }
 

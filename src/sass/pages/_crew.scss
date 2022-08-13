@@ -3,10 +3,18 @@
 body[class="crew"] {
   background-image: url("../../assets/crew/background-crew-desktop.jpg");
 
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  align-items: flex-end;
+
+  @include breakpoint("tablet") {
+    display: block;
+  }
+
   .section-text {
-    height: 100%;
     grid-column: 2;
 
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
