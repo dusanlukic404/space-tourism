@@ -537,12 +537,6 @@ body {
     text-align: center;
   }
 }
-@media (max-width: 38.75em) {
-  .grid-container {
-    width: calc(100% - 1.5625rem * 2);
-    margin-inline: auto;
-  }
-}
 
 .flex-container {
   display: flex;
@@ -553,6 +547,16 @@ body {
 @media (max-width: 61.25em) {
   .flex-container {
     flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 38.75em) {
+  .home-section__text > p,
+.technology-info,
+.destination-description,
+.crew-text__bio {
+    width: calc(100% - 1.5625rem * 2);
+    margin-inline: auto;
   }
 }
 

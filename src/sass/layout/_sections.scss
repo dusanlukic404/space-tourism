@@ -39,11 +39,6 @@ body {
     align-items: center;
     text-align: center;
   }
-
-  @include breakpoint("mobile") {
-    width: calc(100% - rem(25) * 2);
-    margin-inline: auto;
-  }
 }
 
 .flex-container {
@@ -55,5 +50,15 @@ body {
 
   @include breakpoint("tablet") {
     flex-direction: column-reverse;
+  }
+}
+
+.home-section__text > p,
+.technology-info,
+.destination-description,
+.crew-text__bio {
+  @include breakpoint("mobile") {
+    width: calc(100% - rem(25) * 2);
+    margin-inline: auto;
   }
 }
