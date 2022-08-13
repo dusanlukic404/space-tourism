@@ -9,5 +9,9 @@ body[class="technology"] {
     gap: rem(80);
 
     margin-inline: auto;
+
+    @include breakpoint("tablet") {
+      flex-direction: column;
+    }
   }
 }

@@ -3,6 +3,10 @@
 body[class="destination"] {
   background-image: url("../../assets/destination/background-destination-desktop.jpg");
 
+  @include breakpoint("tablet") {
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
+  }
+
   .section-img {
     grid-column: 2;
   }
@@ -13,6 +17,10 @@ body[class="destination"] {
     & > p {
       padding-bottom: rem(50);
       border-bottom: 1px solid rgba($clr-white, 0.3);
+
+      @include breakpoint("tablet") {
+        max-width: rem(512);
+      }
     }
   }
 
@@ -27,4 +35,8 @@ body[class="destination"] {
   align-items: center;
   margin-top: rem(28);
   gap: rem(39);
+
+  @include breakpoint("tablet") {
+    justify-content: center;
+  }
 }

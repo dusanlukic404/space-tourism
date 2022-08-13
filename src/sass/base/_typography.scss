@@ -48,7 +48,7 @@ h4 {
 }
 
 p {
-  font-size: clamp(rem(15), 1.5vw + 0.5rem, rem(18));
+  font-size: clamp(rem(15), 1.2vw + 0.5rem, rem(18));
 
   &.technology-subheading {
     @extend %subheading;
@@ -80,6 +80,10 @@ a {
   text-transform: uppercase;
   margin-block: rem(50) rem(80);
 
+  @include breakpoint("tablet") {
+    text-align: center;
+  }
+
   & > .numbered-span {
     color: rgba($clr-white, 0.3);
   }
@@ -105,12 +109,17 @@ a {
   max-width: 30ch;
   line-height: 1.4;
   letter-spacing: 2px;
+
+  @include breakpoint("tablet") {
+    text-align: center;
+    max-width: rem(380);
+  }
 }
 
 .home-section__text span {
   font-family: "Bellefair", serif;
   color: $clr-white;
-  font-size: clamp(rem(80), 7vw + 1rem, rem(150));
+  font-size: clamp(rem(80), 10vw + 1rem, rem(150));
 }
 
 .section-text > p,
@@ -119,10 +128,34 @@ a {
   max-width: rem(370);
   color: $clr-accent;
   line-height: 1.6;
+
+  @include breakpoint("tablet") {
+    text-align: center;
+    max-width: rem(400);
+  }
+}
+
+.crew-text__bio {
+  @include breakpoint("tablet") {
+    max-width: rem(410);
+    margin-inline: auto;
+  }
 }
 
 .technology-info {
   max-width: rem(351);
+
+  @include breakpoint("tablet") {
+    text-align: center;
+    max-width: rem(392);
+    margin-top: rem(16);
+  }
+}
+
+.technology-text {
+  @include breakpoint("tablet") {
+    text-align: center;
+  }
 }
 
 .btn-explore {

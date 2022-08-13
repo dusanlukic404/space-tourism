@@ -41,9 +41,14 @@ fetch("../data.json")
 function changeTech(data) {
   const techName = document.querySelector(".technology-heading");
   const techDescription = document.querySelector(".technology-info");
-  const techImg = document.querySelector(".technology-img");
+  const techImg = document.querySelectorAll(".technology-img");
 
   techName.textContent = data.name;
   techDescription.textContent = data.description;
-  techImg.src = data.images.portrait;
+
+  if (window.innerWidth > 980) {
+    techImg[0].srcset = data.images.portrait;
+  } else {
+    techImg[1].srcset = data.images.landscape;
+  }
 }

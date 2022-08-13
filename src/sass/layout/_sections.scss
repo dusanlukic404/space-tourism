@@ -38,6 +38,14 @@ body {
     minmax(rem(32), 1fr);
   justify-items: center;
   align-items: end;
+
+  @include breakpoint("tablet") {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .flex-container {
@@ -46,4 +54,8 @@ body {
   justify-content: flex-end;
 
   margin-bottom: rem(101);
+
+  @include breakpoint("tablet") {
+    flex-direction: column-reverse;
+  }
 }

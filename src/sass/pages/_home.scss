@@ -10,4 +10,8 @@ body[class="home"] {
   .home-section__btn {
     grid-column: 3;
   }
+
+  @include breakpoint("tablet") {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
 }

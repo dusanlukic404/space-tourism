@@ -25,6 +25,10 @@
   z-index: 1000;
   outline: 0;
 
+  @include breakpoint("tablet") {
+    margin-top: clamp(rem(100), 4vw + 1rem, rem(150));
+  }
+
   &::before {
     position: absolute;
     content: "";

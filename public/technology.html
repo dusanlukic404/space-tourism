@@ -125,12 +125,23 @@
             </div>
           </div>
           <div class="section-img">
-            <img
-              src="./assets/technology/image-launch-vehicle-portrait.jpg"
-              alt="Technology"
-              class="technology-img"
-            />
-            <!-- picture tag needed here instead of img -->
+            <picture>
+              <source
+                media="(min-width: 980px)"
+                srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
+                class="technology-img"
+              />
+              <source
+                media="(min-width: 200px)"
+                srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
+                class="technology-img"
+              />
+
+              <img
+                src="./assets/technology/image-launch-vehicle-portrait.jpg"
+                alt="Technology"
+              />
+            </picture>
           </div>
         </div>
       </section>
