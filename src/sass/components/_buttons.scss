@@ -11,6 +11,23 @@
 
 .btn-menu {
   display: none;
+
+  @include breakpoint("mobile") {
+    display: block;
+    position: relative;
+    z-index: 99999;
+    margin-inline: auto clamp(rem(24), 5vw, rem(56));
+  }
+}
+
+.icon {
+  display: none;
+  width: rem(30);
+  height: rem(30);
+
+  &--active {
+    display: block;
+  }
 }
 
 .btn-explore {

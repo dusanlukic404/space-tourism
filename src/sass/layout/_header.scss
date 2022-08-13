@@ -37,15 +37,45 @@
   .primary-navigation {
     display: flex;
     align-items: center;
-    gap: min(5vw, rem(48));
+    gap: min(10vw, rem(38));
     padding-inline: clamp(rem(24), 4vw + 0.5rem, rem(144));
     background-color: $clr-navigation;
     backdrop-filter: blur(10px);
     order: 2;
 
+    @include breakpoint("mobile") {
+      position: absolute;
+      inset: 0 0 0 30%;
+      z-index: 9999;
+      backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: flex-start;
+      padding-inline: clamp(rem(24), 7vw + 0.5rem, rem(68));
+
+      padding-top: rem(150);
+      font-size: rem(16);
+
+      // transform: translateX(100%);
+    }
+
     .link {
-      $padding: rem(39);
-      padding-block: $padding;
+      $padding-header-link: rem(39);
+      padding-block: $padding-header-link;
+
+      @include breakpoint("mobile") {
+        $padding-header-link: rem(10);
+        padding-block: $padding-header-link;
+      }
+    }
+
+    .numbered-span {
+      @include breakpoint("tablet") {
+        display: none;
+      }
+
+      @include breakpoint("mobile") {
+        display: inline;
+      }
     }
   }
 }
