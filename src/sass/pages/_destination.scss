@@ -7,6 +7,10 @@ body[class="destination"] {
     background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
 
+  @include breakpoint("mobile") {
+    background-image: url("../../assets/destination/background-destination-mobile.jpg");
+  }
+
   .section-img {
     grid-column: 2;
   }

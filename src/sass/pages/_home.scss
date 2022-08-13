@@ -12,6 +12,10 @@ body[class="home"] {
     background-image: url("../../assets/home/background-home-tablet.jpg");
   }
 
+  @include breakpoint("mobile") {
+    background-image: url("../../assets/home/background-home-mobile.jpg");
+  }
+
   .home-section__text {
     grid-column: 2;
 
