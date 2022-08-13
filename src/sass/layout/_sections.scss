@@ -41,7 +41,7 @@ body {
   }
 
   @include breakpoint("mobile") {
-    width: calc(100% - rem(20) * 2);
+    width: calc(100% - rem(25) * 2);
     margin-inline: auto;
   }
 }

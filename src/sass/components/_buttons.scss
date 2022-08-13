@@ -32,18 +32,19 @@
 }
 
 // control menu
-
-.btn-menu .icon--hamburger {
-  display: block;
-}
-
-.btn-menu.btn-menu--active {
-  .icon--hamburger {
-    display: none;
+@include breakpoint("mobile") {
+  .btn-menu .icon--hamburger {
+    display: block;
   }
 
-  .icon--close {
-    display: block;
+  .btn-menu.btn-menu--active {
+    .icon--hamburger {
+      display: none;
+    }
+
+    .icon--close {
+      display: block;
+    }
   }
 }
 
