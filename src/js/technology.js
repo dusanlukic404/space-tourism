@@ -34,6 +34,12 @@ fetch("../data.json")
         );
 
         changeTech(dataForTech);
+
+        gsap.from(".technology-heading, .technology-info", {
+          duration: 1,
+          opacity: 0,
+          y: 50,
+        });
       }
     });
   });
@@ -52,3 +58,19 @@ function changeTech(data) {
     techImg[1].srcset = data.images.landscape;
   }
 }
+
+const tl = gsap.timeline();
+
+tl.from(".technology-link", {
+  duration: 1,
+  opacity: 0,
+  x: -100,
+  stagger: 0.25,
+  ease: "back",
+});
+
+tl.from(".technology-heading, .technology-info", {
+  duration: 1,
+  opacity: 0,
+  y: 50,
+});

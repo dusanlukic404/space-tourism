@@ -25,6 +25,10 @@ body[class="crew"] {
     justify-content: space-between;
 
     padding-bottom: rem(120);
+
+    @include breakpoint("mobile") {
+      padding-bottom: 0;
+    }
   }
 
   .section-img {

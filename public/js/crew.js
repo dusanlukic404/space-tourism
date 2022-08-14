@@ -26,6 +26,12 @@ fetch("../data.json")
       );
 
       changeCrew(dataForCrew);
+
+      gsap.from(".crew-text", {
+        duration: 0.8,
+        opacity: 0,
+        y: 50,
+      });
     });
   });
 
@@ -40,3 +46,17 @@ function changeCrew(data) {
   crewBio.textContent = data.bio;
   crewImg.src = data.images.png;
 }
+
+gsap.from(".crew-link", {
+  duration: 1.2,
+  opacity: 0,
+  y: 30,
+  stagger: 0.25,
+  delay: 1,
+});
+
+gsap.from(".crew-text", {
+  duration: 0.8,
+  opacity: 0,
+  y: 50,
+});

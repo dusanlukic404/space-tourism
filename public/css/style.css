@@ -659,6 +659,11 @@ body[class=crew] .section-text {
   justify-content: space-between;
   padding-bottom: 7.5rem;
 }
+@media (max-width: 38.75em) {
+  body[class=crew] .section-text {
+    padding-bottom: 0;
+  }
+}
 body[class=crew] .section-img {
   grid-column: 3;
   padding-top: 4.375rem;
